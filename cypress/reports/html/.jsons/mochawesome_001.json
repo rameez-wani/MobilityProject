@@ -1,0 +1,162 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-11-20T17:57:54.462Z",
+    "end": "2023-11-20T18:00:01.797Z",
+    "duration": 127335,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9720bd57-8917-467e-9aec-a8ffd7b5fed0",
+      "title": "",
+      "fullFile": "cypress\\integration\\MobilityProject\\Category.js",
+      "file": "cypress\\integration\\MobilityProject\\Category.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3d28789a-f376-4c58-8eef-fbe54401ce08",
+          "title": "Categories Screen",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create multiple categories in one go",
+              "fullTitle": "Categories Screen Create multiple categories in one go",
+              "timedOut": null,
+              "duration": 44453,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('url'));\nmobilityObject.getLogin();\nmobilityObject.getMultipleCreateCategories();",
+              "err": {},
+              "uuid": "df7d0df1-22ea-486b-900b-8619939282b3",
+              "parentUUID": "3d28789a-f376-4c58-8eef-fbe54401ce08",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Search Category",
+              "fullTitle": "Categories Screen Search Category",
+              "timedOut": null,
+              "duration": 20605,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('url'));\nmobilityObject.getLogin();\nmobilityObject.getSingleCreateCategory();\ncy.get('.MuiInputBase-input:nth-child(2)').type(mobilityObject.catname);\ncy.wait(2000);\ncy.get('.MuiDataGrid-cellContent').should('have.text', mobilityObject.catname);\ncy.get('.MuiInputBase-input:nth-child(2)').clear().type(mobilityObject.catcode);\ncy.get('a.link').should('have.text', mobilityObject.catcode);",
+              "err": {},
+              "uuid": "908ff479-0453-4af1-b4c5-85a6328e3322",
+              "parentUUID": "3d28789a-f376-4c58-8eef-fbe54401ce08",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Update Category",
+              "fullTitle": "Categories Screen Update Category",
+              "timedOut": null,
+              "duration": 33751,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('url'));\nmobilityObject.getLogin();\nmobilityObject.getSingleCreateCategory();\nmobilityObject.getUpdateCategory();",
+              "err": {},
+              "uuid": "88716d8a-2f50-472c-83c6-61145adfad89",
+              "parentUUID": "3d28789a-f376-4c58-8eef-fbe54401ce08",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Update status from Category list page",
+              "fullTitle": "Categories Screen Update status from Category list page",
+              "timedOut": null,
+              "duration": 24879,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('url'));\nmobilityObject.getLogin();\nmobilityObject.getSingleCreateCategory();\ncy.get('.MuiInputBase-input:nth-child(2)').type(mobilityObject.catcode);\ncy.wait(5000);\ncy.get('a.link').should('have.text', mobilityObject.catcode);\ncy.get('.MuiDataGrid-cellCheckbox > .MuiButtonBase-root > .PrivateSwitchBase-input').click();\ncy.get('span.inactive').should('have.text', 'Inactive');\ncy.get('.css-1up2o6-MuiGrid-root > :nth-child(1) > .MuiButtonBase-root').click();\ncy.get('.MuiDialogActions-root > .MuiButton-outlined').click();\ncy.get('.Toastify__toast-body').should('have.text', 'Status updated successfully');\ncy.get('span.inactive').should('have.text', 'Inactive');",
+              "err": {},
+              "uuid": "8f6f803a-f687-4bd6-b82c-cadc215aee12",
+              "parentUUID": "3d28789a-f376-4c58-8eef-fbe54401ce08",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "df7d0df1-22ea-486b-900b-8619939282b3",
+            "908ff479-0453-4af1-b4c5-85a6328e3322",
+            "88716d8a-2f50-472c-83c6-61145adfad89",
+            "8f6f803a-f687-4bd6-b82c-cadc215aee12"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 123688,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 7,
+    "passes": 7,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-11-20T18:08:17.955Z",
+    "end": "2023-11-20T18:08:46.107Z",
+    "duration": 28152,
+    "testsRegistered": 7,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2ab525f8-57ac-476e-af0f-b1ebcfaaa075",
+      "title": "",
+      "fullFile": "cypress\\integration\\MobilityProject\\Login.js",
+      "file": "cypress\\integration\\MobilityProject\\Login.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "110bc20b-8569-49aa-b6fa-a2ea7044e79c",
+          "title": "Login Page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "All fields are visible",
+              "fullTitle": "Login Page All fields are visible",
+              "timedOut": null,
+              "duration": 7013,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://sap.f2wmobi.de/\");\ncy.get('.login-logo').should('be.visible');\ncy.get('div.login-left>.MuiTypography-root:nth-child(1)').should('have.text', \"Welcome to \");\ncy.get('div.login-left>.MuiTypography-root:nth-child(2)').should('have.text', \"MOBILITY BUDGET MANAGEMENT\");\ncy.get(\"div.login-left>.MuiTypography-root:nth-child(3)\").should('have.text', \"Streamline your mobility expenses with budget management\");\ncy.get('form.MuiBox-root>.MuiTypography-root:nth-child(1)').should('have.text', \"Login\");\ncy.get('form.MuiBox-root>.label:nth-child(2)').contains('Email Address');\ncy.get('span.asterisk:nth-child(1)').should('be.visible');\ncy.get('form.MuiBox-root>.label:nth-child(4)').contains(\"Password\");\ncy.get('span.asterisk:nth-child(1)').should('be.visible');\ncy.get('span.MuiTypography-root:nth-child(2)').should('have.text', \"Remember Me\");\ncy.get('a.label').should('have.text', \"Forgot Password?\");\ncy.get(\"button[type='submit']\").should('be.visible');\ncy.get('.css-1f7c9pe-MuiGrid-root').should('be.visible');",
+              "err": {},
+              "uuid": "f03c64e6-6a4d-4d87-809d-7785556d1510",
+              "parentUUID": "110bc20b-8569-49aa-b6fa-a2ea7044e79c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Valid Credentials",
+              "fullTitle": "Login Page Valid Credentials",
+              "timedOut": null,
+              "duration": 3841,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://sap.f2wmobi.de/\");\ncy.get('#emailaddress').type('sap.admin@yopmail.com');\ncy.get('#password').type('Admin@123');\ncy.get(\"button[type='submit']\").click();\ncy.get('.MuiContainer-root > .MuiDrawer-root > .MuiPaper-root > :nth-child(1) > .drawer-top > .css-old1by >  .MuiBox-root').should('be.visible');",
+              "err": {},
+              "uuid": "1f886078-e657-4d91-b828-4fdac65dc432",
+              "parentUUID": "110bc20b-8569-49aa-b6fa-a2ea7044e79c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Show Password",
+              "fullTitle": "Login Page Show Password",
+              "timedOut": null,
+              "duration": 2454,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://sap.f2wmobi.de/\");\ncy.get('#emailaddress').type('sap.admin@yopmail.com');\ncy.get('#password').type('Admin@123');\ncy.get('.MuiInputAdornment-positionEnd > .MuiButtonBase-root').click();\ncy.get('#password').should('have.value', 'Admin@123');",
+              "err": {},
+              "uuid": "afea3eb4-2dcf-4906-96e5-e7042f5ba4b3",
+              "parentUUID": "110bc20b-8569-49aa-b6fa-a2ea7044e79c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Without entering any credentials",
+              "fullTitle": "Login Page Without entering any credentials",
+              "timedOut": null,
+              "duration": 1423,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://sap.f2wmobi.de/\");\ncy.get(\"button[type='submit']\").click();\ncy.get('form.MuiBox-root>p.MuiTypography-root:nth-child(4)').should('have.text', \"Please enter email address\");\ncy.get('form.MuiBox-root>p.MuiTypography-root:nth-child(7)').should('have.text', \"Please enter password\");",
+              "err": {},
+              "uuid": "12675719-c503-4d18-8f98-c2a71296d59e",
+              "parentUUID": "110bc20b-8569-49aa-b6fa-a2ea7044e79c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Invalid data in e-mail address",
+              "fullTitle": "Login Page Invalid data in e-mail address",
+              "timedOut": null,
+              "duration": 1890,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://sap.f2wmobi.de/\");\ncy.get('#emailaddress').type('abc123');\ncy.get('#password').type('Admin@123');\ncy.get(\"button[type='submit']\").click();\ncy.get('form.MuiBox-root>p.MuiTypography-root:nth-child(4)').should('have.text', \"Please enter valid email address\");",
+              "err": {},
+              "uuid": "33207e0d-7666-4382-8bec-8fe45d6a4f8f",
+              "parentUUID": "110bc20b-8569-49aa-b6fa-a2ea7044e79c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Invalid data in password",
+              "fullTitle": "Login Page Invalid data in password",
+              "timedOut": null,
+              "duration": 2127,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://sap.f2wmobi.de/\");\ncy.get('#emailaddress').type('sap.admin@yopmail.com');\ncy.get('#password').type('abc123');\ncy.get(\"button[type='submit']\").click();\ncy.get('form.MuiBox-root>p.MuiTypography-root:nth-child(6)').should('have.text', \"Please enter valid password\");",
+              "err": {},
+              "uuid": "41067d66-7922-4f28-9b7a-f24af3906d78",
+              "parentUUID": "110bc20b-8569-49aa-b6fa-a2ea7044e79c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Remember credentials",
+              "fullTitle": "Login Page Remember credentials",
+              "timedOut": null,
+              "duration": 3430,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://sap.f2wmobi.de/\");\ncy.get('#emailaddress').type('sap.admin@yopmail.com');\ncy.get('#password').type('Admin@123');\ncy.get(\"input[value='remember']\").check();\ncy.get(\"button[type='submit']\").click();\n//Check Logo\ncy.get('.MuiContainer-root > .MuiDrawer-root > .MuiPaper-root > :nth-child(1) > .drawer-top > .css-old1by >  .MuiBox-root').should('be.visible');\n//Logout button\ncy.get('.MuiContainer-root > .MuiDrawer-root > .MuiPaper-root > .sidebar-full > :nth-child(7) > .MuiListItem-root > .MuiButtonBase-root').click();\ncy.get('#emailaddress').should('have.value', 'sap.admin@yopmail.com');\ncy.get('#password').should('have.value', 'Admin@123');",
+              "err": {},
+              "uuid": "e8da014b-5907-414d-a46c-264b3aefe336",
+              "parentUUID": "110bc20b-8569-49aa-b6fa-a2ea7044e79c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f03c64e6-6a4d-4d87-809d-7785556d1510",
+            "1f886078-e657-4d91-b828-4fdac65dc432",
+            "afea3eb4-2dcf-4906-96e5-e7042f5ba4b3",
+            "12675719-c503-4d18-8f98-c2a71296d59e",
+            "33207e0d-7666-4382-8bec-8fe45d6a4f8f",
+            "41067d66-7922-4f28-9b7a-f24af3906d78",
+            "e8da014b-5907-414d-a46c-264b3aefe336"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 22178,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
