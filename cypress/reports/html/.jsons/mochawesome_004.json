@@ -1,0 +1,178 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 0,
+    "pending": 0,
+    "failures": 4,
+    "start": "2023-11-21T14:38:19.898Z",
+    "end": "2023-11-21T14:38:23.735Z",
+    "duration": 3837,
+    "testsRegistered": 4,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0c41a6fc-8eb7-4220-97f4-c2a34b7e9485",
+      "title": "",
+      "fullFile": "cypress\\integration\\MobilityProject\\Employee.js",
+      "file": "cypress\\integration\\MobilityProject\\Employee.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f38ddb8f-55cd-492f-bf23-952830432e64",
+          "title": "Employee Screen",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create employee in the list",
+              "fullTitle": "Employee Screen Create employee in the list",
+              "timedOut": null,
+              "duration": 881,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('url'));\nmobilityObject.getLogin();\nmobilityObject.getCreateNewEmployee();",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://sap.f2wmobi.de/\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://sap.f2wmobi.de/\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n    at <unknown> (http://localhost:58621/__cypress/runner/cypress_runner.js:131331:76)\n    at visitFailedByErr (http://localhost:58621/__cypress/runner/cypress_runner.js:130739:12)\n    at <unknown> (http://localhost:58621/__cypress/runner/cypress_runner.js:131314:13)\n    at tryCatcher (http://localhost:58621/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (http://localhost:58621/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (http://localhost:58621/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (http://localhost:58621/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (http://localhost:58621/__cypress/runner/cypress_runner.js:1697:18)\n    at _drainQueueStep (http://localhost:58621/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (http://localhost:58621/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (http://localhost:58621/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (http://localhost:58621/__cypress/runner/cypress_runner.js:2286:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://cypressautomation/./cypress/integration/MobilityProject/Employee.js:10:9)",
+                "diff": null
+              },
+              "uuid": "e45835b4-5b24-4cde-b5b4-4d9bc099a627",
+              "parentUUID": "f38ddb8f-55cd-492f-bf23-952830432e64",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Create Budget",
+              "fullTitle": "Employee Screen Create Budget",
+              "timedOut": null,
+              "duration": 1042,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('url'));\nmobilityObject.getLogin();\nmobilityObject.getCreateBudgetGroup();\ncy.get('.MuiDialogContent-root > .MuiBox-root > :nth-child(3)').click();\ncy.get('.MuiDialogActions-root > .MuiButton-outlined').click();\ncy.wait(5000);\ncy.get('.MuiGrid-spacing-xs-2 > :nth-child(1) > .MuiInputBase-root > .MuiInputBase-input').type('abcd100').invoke('val').should(value => {\n  expect(Number.isInteger(+value), 'input should be an integer').to.eq(true);\n});\n//Start Month\ncy.get(':nth-child(2) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputAdornment-root > .MuiButtonBase-root').click();\n//select month\ncy.get('.MuiPickersCalendarHeader-label').click();\n//select year\ncy.get('.PrivatePickersYear-yearButton').contains('2025').click();\n//End Month\ncy.get(':nth-child(3) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputAdornment-root > .MuiButtonBase-root').click();\n//select month\ncy.get('.MuiPickersCalendarHeader-label').click();\n//select year\ncy.get('.PrivatePickersYear-yearButton').contains('2026').click();\ncy.get(\"button[type='submit']\").should('have.text', 'Next').click();\ncy.get('.Toastify__toast-body > :nth-child(2)').should('have.text', 'Budget group setting updated successfully');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://sap.f2wmobi.de/\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://sap.f2wmobi.de/\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n    at <unknown> (http://localhost:58621/__cypress/runner/cypress_runner.js:131331:76)\n    at visitFailedByErr (http://localhost:58621/__cypress/runner/cypress_runner.js:130739:12)\n    at <unknown> (http://localhost:58621/__cypress/runner/cypress_runner.js:131314:13)\n    at tryCatcher (http://localhost:58621/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (http://localhost:58621/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (http://localhost:58621/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (http://localhost:58621/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (http://localhost:58621/__cypress/runner/cypress_runner.js:1697:18)\n    at _drainQueueStep (http://localhost:58621/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (http://localhost:58621/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (http://localhost:58621/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (http://localhost:58621/__cypress/runner/cypress_runner.js:2286:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://cypressautomation/./cypress/integration/MobilityProject/Employee.js:18:7)",
+                "diff": null
+              },
+              "uuid": "4eafb496-3c81-4365-9775-93f613d2af50",
+              "parentUUID": "f38ddb8f-55cd-492f-bf23-952830432e64",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Add Budget in employee",
+              "fullTitle": "Employee Screen Add Budget in employee",
+              "timedOut": null,
+              "duration": 717,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('url'));\nmobilityObject.getLogin();\nmobilityObject.getCreateBudgetGroup();\ncy.get('.MuiDialogContent-root > .MuiBox-root > :nth-child(3)').click();\ncy.get('.MuiDialogActions-root > .MuiButton-outlined').click();\ncy.wait(5000);\ncy.get('.MuiGrid-spacing-xs-2 > :nth-child(1) > .MuiInputBase-root > .MuiInputBase-input').type('abcd100').invoke('val').should(value => {\n  expect(Number.isInteger(+value), 'input should be an integer').to.eq(true);\n});\n//Start Month\ncy.get(':nth-child(2) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputAdornment-root > .MuiButtonBase-root').click();\n//select month\ncy.get('.MuiPickersCalendarHeader-label').click();\n//select year\ncy.get('.PrivatePickersYear-yearButton').contains('2025').click();\n//End Month\ncy.get(':nth-child(3) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputAdornment-root > .MuiButtonBase-root').click();\n//select month\ncy.get('.MuiPickersCalendarHeader-label').click();\n//select year\ncy.get('.PrivatePickersYear-yearButton').contains('2026').click();\ncy.get(\"button[type='submit']\").should('have.text', 'Next').click();\ncy.wait(500);\ncy.get('.Toastify__toast-body > :nth-child(2)').should('have.text', 'Budget group setting updated successfully');\n//cy.get('.MuiButton-contained').click()\nmobilityObject.getCreateNewEmployee();\ncy.get('.MuiDialogContent-root > .MuiInputBase-root > .MuiInputBase-input').type(mobilityObject.budgetGroupName);\ncy.wait(3000);\ncy.get('.MuiDialogContent-root > .MuiBox-root > .MuiButtonBase-root').click();\ncy.get('.MuiDialogActions-root > .MuiButton-outlined').click();\ncy.wait(3000);\ncy.get(\"button[label='Submit']\").should('have.text', 'Submit').click();\ncy.wait(1000);\n// bug in mssage - tejaswini\ncy.get('.Toastify__toast-body').should('have.text', 'Employee allocation update successfully');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://sap.f2wmobi.de/\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://sap.f2wmobi.de/\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n    at <unknown> (http://localhost:58621/__cypress/runner/cypress_runner.js:131331:76)\n    at visitFailedByErr (http://localhost:58621/__cypress/runner/cypress_runner.js:130739:12)\n    at <unknown> (http://localhost:58621/__cypress/runner/cypress_runner.js:131314:13)\n    at tryCatcher (http://localhost:58621/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (http://localhost:58621/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (http://localhost:58621/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (http://localhost:58621/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (http://localhost:58621/__cypress/runner/cypress_runner.js:1697:18)\n    at _drainQueueStep (http://localhost:58621/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (http://localhost:58621/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (http://localhost:58621/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (http://localhost:58621/__cypress/runner/cypress_runner.js:2286:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://cypressautomation/./cypress/integration/MobilityProject/Employee.js:50:7)",
+                "diff": null
+              },
+              "uuid": "5d9310bc-e27d-434d-a5fb-c2302b1908e7",
+              "parentUUID": "f38ddb8f-55cd-492f-bf23-952830432e64",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Search Employee",
+              "fullTitle": "Employee Screen Search Employee",
+              "timedOut": null,
+              "duration": 717,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('url'));\nmobilityObject.getLogin();\nmobilityObject.getCreateNewEmployee();\ncy.get('.MuiButton-contained').click();\ncy.get('p.MuiTypography-p.back-btn').click();\ncy.wait(2000);\n// cy.get('.MuiInputBase-input:nth-child(2)').type(mobilityObject.empFullName)\n// cy.wait(2000)\n// cy.get('.MuiDataGrid-cellContent').should('have.text',mobilityObject.empFullName)\ncy.get('.MuiInputBase-input:nth-child(2)').clear().type(mobilityObject.empcode);\ncy.get('[data-field=\"systemCode\"] > .link').should('have.text', mobilityObject.empcode);",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://sap.f2wmobi.de/\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://sap.f2wmobi.de/\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n    at <unknown> (http://localhost:58621/__cypress/runner/cypress_runner.js:131331:76)\n    at visitFailedByErr (http://localhost:58621/__cypress/runner/cypress_runner.js:130739:12)\n    at <unknown> (http://localhost:58621/__cypress/runner/cypress_runner.js:131314:13)\n    at tryCatcher (http://localhost:58621/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (http://localhost:58621/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (http://localhost:58621/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (http://localhost:58621/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (http://localhost:58621/__cypress/runner/cypress_runner.js:1697:18)\n    at _drainQueueStep (http://localhost:58621/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (http://localhost:58621/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (http://localhost:58621/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (http://localhost:58621/__cypress/runner/cypress_runner.js:2286:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://cypressautomation/./cypress/integration/MobilityProject/Employee.js:96:9)",
+                "diff": null
+              },
+              "uuid": "b423d024-45fa-411e-b180-056051e95356",
+              "parentUUID": "f38ddb8f-55cd-492f-bf23-952830432e64",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "e45835b4-5b24-4cde-b5b4-4d9bc099a627",
+            "4eafb496-3c81-4365-9775-93f613d2af50",
+            "5d9310bc-e27d-434d-a5fb-c2302b1908e7",
+            "b423d024-45fa-411e-b180-056051e95356"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 3357,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
