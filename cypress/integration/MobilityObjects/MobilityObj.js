@@ -183,7 +183,7 @@ class MobilityObj {
       cy.get('.MuiContainer-root > .MuiDrawer-root > .MuiPaper-root > :nth-child(1) > .sidebar > .menuItem-3 > .MuiButtonBase-root').click()
       //Employee Screen
       cy.get(':nth-child(5) > .MuiPaper-elevation16 > .MuiDrawer-root > .MuiPaper-root > .MuiList-root > .MuiListItem-root > .MuiButtonBase-root > .MuiListItemText-root > .MuiTypography-root').click()
-      cy.get('.MuiGrid-root:nth-child(4)').click()
+      cy.get('button[label="Add New"]').click()
       this.empcode = this.userID_Alpha_Numeric()
       this.empFN = this.userID_Alpha_Numeric()
       this.empLN = this.userID_Alpha_Numeric()
